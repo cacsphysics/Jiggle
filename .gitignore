@@ -1,0 +1,12 @@
+#Folders
+__pycache__/
+dist/
+build/
+test/
+include/
+
+#Files
+Application/test.py
+
+#Suffixes
+*.egg-info/
