@@ -6,7 +6,6 @@ test/
 include/
 
 #Files
-Application/test.py
 
 #Suffixes
 *.egg-info/
