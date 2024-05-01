@@ -1,65 +1,35 @@
 # Jiggle
 
-Jiggle is a minimal game engine module for python.
+Simple Game Engine!
 
 ## Description
 
-Jiggle is currently very early in development and the scope of the project is subject to change.
+Jiggle is currently very early in development and the scope of the project is subject to change. Please feel free to contribute to Jiggle or any of it's related modules ([Numberful](https://github.com/KevinFerryJr/Numberful), & [SpringBox](https://github.com/KevinFerryJr/SpringBox)). If you have any questions about contributing contact the author of this repository.
 
 ## Getting Started
+* For helpful examples of how to use Jiggle, and boilerplate code to get you going take a look at the examples folder.
 
 ### Dependencies
 
-* Python >= 3.10
+* [Python >= 3.10](https://www.python.org/downloads/)
 * [PyOpenGL](https://pypi.org/project/PyOpenGL/)
 * [GLFW for Python](https://pypi.org/project/glfw/)
-* Numberful
-* SpringBox
+* [Numberful](https://github.com/KevinFerryJr/Numberful)
+* [SpringBox](https://github.com/KevinFerryJr/SpringBox)
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+* To install the Jiggle module itself simply type "pip install Jiggle"
+* Note: You will also need to install Numberful & SpringBox modules using pip!
 
 ## Authors
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Kevin Ferry Jr.  
+Email: KevinFerryDesign@gmail.com
 
 ## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+* 0.3
+    * Initial Release - WIP
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+This project is licensed under the Apache Lisence 2.0 - see the LICENSE.md file for details
