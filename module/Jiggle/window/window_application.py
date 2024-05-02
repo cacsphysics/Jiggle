@@ -3,7 +3,7 @@ from OpenGL.GL import *
 from .window_abstraction import AbstractWindow
 
 class ApplicationWindow(AbstractWindow):
-	def __init__(self, width: int, height: int, title: str):
+	def __init__(self, width: int, height: int, title = "Jiggle Application"):
 		super().__init__(width, height, title)
 		self.create()
 

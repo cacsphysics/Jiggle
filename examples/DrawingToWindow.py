@@ -1,6 +1,6 @@
 import Jiggle
 
-win = Jiggle.Window.ApplicationWindow(800,600,"Jiggle Window")
+win = Jiggle.Window.ApplicationWindow(800,600)
 
 #Variables for Testing
 polygon_verts = ((50,50), (0,100), (-50, 50), (-50, -50), (50, -50))
