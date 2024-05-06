@@ -1,10 +1,12 @@
 import glfw
 from OpenGL.GL import *
 from .window_abstraction import AbstractWindow
+from SpringBox.Time.clock import Clock
 
 class ApplicationWindow(AbstractWindow):
 	def __init__(self, width: int, height: int, title = "Jiggle Application"):
 		super().__init__(width, height, title)
+		self._clock = Clock()
 		self.create()
 
 	def create(self):
@@ -30,8 +32,27 @@ class ApplicationWindow(AbstractWindow):
 		glMatrixMode(GL_MODELVIEW)
 		glLoadIdentity()
 
-	def close(self):
-		pass
+	@property
+	def clock(self) -> Clock:
+		return self._clock
+
+	def clear_screen(self):
+		glClear(GL_COLOR_BUFFER_BIT)
+
+	def poll_events(self):
+		glfw.poll_events()
+  
+	def flip(self):
+		glfw.swap_buffers(self._window)
+
+	def run(self):
+		while not glfw.window_should_close(self._window):
+			self.poll_events()
+			self.clear_screen()
+			self.on_update()
+			self.on_draw()
+			self.flip()
+			self._clock.tick()
 
 	def draw(self):
 		pass
@@ -39,14 +60,8 @@ class ApplicationWindow(AbstractWindow):
 	def update(self):
 		pass
 
-	def run(self):
-		while not glfw.window_should_close(self._window):
-			glClear(GL_COLOR_BUFFER_BIT)
-			glfw.poll_events()
-			self.on_update()
-			self.on_draw()
-			glfw.swap_buffers(self._window)
-			
+	def close(self):
+		pass
 
 	def on_draw(self):
 		self.draw()
