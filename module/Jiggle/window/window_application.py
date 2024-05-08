@@ -4,7 +4,7 @@ from .window_abstraction import AbstractWindow
 from SpringBox.Time.clock import Clock
 
 class ApplicationWindow(AbstractWindow):
-	def __init__(self, width: int, height: int, title = "Jiggle Application"):
+	def __init__(self, width: int, height: int, title = "Jiggle Application Window"):
 		super().__init__(width, height, title)
 		self._clock = Clock()
 		self.create()
@@ -41,15 +41,15 @@ class ApplicationWindow(AbstractWindow):
 
 	def poll_events(self):
 		glfw.poll_events()
-  
+
 	def flip(self):
 		glfw.swap_buffers(self._window)
 
 	def run(self):
 		while not glfw.window_should_close(self._window):
 			self.poll_events()
-			self.clear_screen()
 			self.on_update()
+			self.clear_screen()
 			self.on_draw()
 			self.flip()
 			self._clock.tick()
