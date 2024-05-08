@@ -2,5 +2,6 @@
 import Jiggle.graphics as Graphics
 import Jiggle.logging as Logging
 import Jiggle.window as Window
+import Jiggle.entities.entity as Entity
 
-__all__ = ["graphics", "logging", "window"]
+__all__ = ["Graphics", "Logging", "Window", "Entity"]
