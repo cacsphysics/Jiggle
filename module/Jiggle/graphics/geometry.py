@@ -2,7 +2,6 @@ from Jiggle.graphics.draw import Draw
 from Jiggle.graphics.color import Color
 from Numberful import geometry
 
-
 class Point2D(geometry.Point2D):
 	def __init__(self, pos: tuple[float, float], color: tuple[int, int, int]):
 		super().__init__(pos)
