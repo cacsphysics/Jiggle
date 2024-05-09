@@ -1,4 +1,6 @@
 import glfw
+import imgui
+from imgui.integrations.glfw import GlfwRenderer
 from OpenGL.GL import *
 from .window_abstraction import AbstractWindow
 from SpringBox.Time.clock import Clock
@@ -7,9 +9,11 @@ class ApplicationWindow(AbstractWindow):
 	def __init__(self, width: int, height: int, title = "Jiggle Application Window"):
 		super().__init__(width, height, title)
 		self._clock = Clock()
-		self.create()
+		self._window_init()
+		self._gui_renderer = self._gui_init()
+		self._gui_elements = []
 
-	def create(self):
+	def _window_init(self):
 		# Initialize GLFW
 		if not glfw.init():
 			print("Failed to initialize GLFW")
@@ -32,9 +36,19 @@ class ApplicationWindow(AbstractWindow):
 		glMatrixMode(GL_MODELVIEW)
 		glLoadIdentity()
 
+	def _gui_init(self):
+		# Initialize ImGui
+		imgui.create_context()
+		imgui.get_io().fonts.add_font_default()
+		return GlfwRenderer(self._window)
+
 	@property
 	def clock(self) -> Clock:
 		return self._clock
+
+	@property
+	def gui_renderer(self) -> GlfwRenderer:
+		return self._gui_renderer
 
 	def clear_screen(self):
 		glClear(GL_COLOR_BUFFER_BIT)
@@ -57,17 +71,31 @@ class ApplicationWindow(AbstractWindow):
 	def draw(self):
 		pass
 
+	def _gui_draw(self):
+		imgui.render()
+		self._gui_renderer.render(imgui.get_draw_data())
+
 	def update(self):
 		pass
+
+	def _gui_update(self):
+		self._gui_renderer.process_inputs()
+		imgui.new_frame()
+		for element in self._gui_elements:
+			element()
 
 	def close(self):
 		pass
 
 	def on_draw(self):
 		self.draw()
+		self._gui_draw()
 
 	def on_update(self):
 		self.update()
+		self._gui_update()
 
 	def on_close(self):
+		self._gui_renderer.shutdown()
+		glfw.terminate()
 		self.close()

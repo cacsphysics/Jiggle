@@ -1,10 +1,11 @@
 from Numberful import vector
+from SpringBox.Body.phys_body_2d import PhysBody2D
 
 class Entity2D:
 	def __init__(self):
 		self._position = vector.Vec2(0,0)
 		self._rotation = 0.0
-		self._physics_body = None
+		self._physics_body = PhysBody2D()
 		self._shape = None
 		self._collider = None
 

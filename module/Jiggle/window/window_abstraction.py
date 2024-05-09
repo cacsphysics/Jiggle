@@ -6,10 +6,6 @@ class AbstractWindow(ABC):
 		self._height = height
 		self._title = title
 		self._window = None
-  
-	@abstractmethod
-	def create(self):
-		pass
 
 	@abstractmethod
 	def close(self):
