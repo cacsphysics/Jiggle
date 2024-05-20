@@ -33,7 +33,7 @@ Kevin Ferry Jr.
 Email: KevinFerryDesign@gmail.com
 
 ## Version History
-* 0.3
+* 0.1
     * Initial Release - WIP
 
 ## License
