@@ -4,7 +4,7 @@ Simple Game Engine!
 
 ## Description
 
-Jiggle is currently very early in development and the scope of the project is subject to change. Please feel free to contribute to Jiggle or any of it's related modules ([Numberful](https://github.com/KevinFerryJr/Numberful), & [SpringBox](https://github.com/KevinFerryJr/SpringBox)). If you have any questions about contributing contact the author of this repository.
+Jiggle is currently very early in development and the scope of the project is subject to change. Please feel free to contribute to Jiggle or any of it's related modules ([Numberful](https://github.com/KevinFerryJr/Numberful), & [SpringBox](https://github.com/KevinFerryJr/SpringBox)). If you have any questions about contributing contact the author of this repository at ["KevinFerryDesign@gmail.com"]().
 
 ## Getting Started
 * For helpful examples of how to use Jiggle, and boilerplate code to get you going take a look at the examples folder.
