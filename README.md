@@ -13,7 +13,7 @@ Jiggle is currently very early in development and the scope of the project is su
 
 * [Python >= 3.10](https://www.python.org/downloads/)
 * [PyOpenGL >= 3.1.7](https://pypi.org/project/PyOpenGL/)
-* [GLFW for Python](https://pypi.org/project/glfw/)
+* [GLFW for Python >= 2.7.0](https://pypi.org/project/glfw/)
 * [PyImGUI](https://pypi.org/project/imgui/)
 * [Numberful](https://github.com/KevinFerryJr/Numberful)
 * [SpringBox](https://github.com/KevinFerryJr/SpringBox)
