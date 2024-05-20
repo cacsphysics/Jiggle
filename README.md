@@ -1,4 +1,5 @@
-# Jiggle - Simple Game Engine!
+# Jiggle
+Simple Game Engine!
 
 ## Description
 
