@@ -17,10 +17,14 @@ Jiggle is currently very early in development and the scope of the project is su
 * [Numberful](https://github.com/KevinFerryJr/Numberful)
 * [SpringBox](https://github.com/KevinFerryJr/SpringBox)
 
-### Installing
+### Installing (Windows Only!)
 
-* To install the Jiggle module itself simply type "pip install Jiggle"
-* Note: You will also need to install Numberful & SpringBox modules using pip!
+* To install the Jiggle module you'll have to download the project and package it first.
+* To package open a terminal navigate to the "Jiggle/module/" of the project.
+* Type the command "python setup.py sdist" into the termianl (this will package the project as a local module).
+* Finally to install the newly packaged module, while in the same directory as before, enter the command "pip install ." into the terminal (this will install the packaged module).
+* Check for install: To see if you were successful type "pip list" and search for "Jiggle X.X.X" in the list of results. If you see it congulations, you've installed the Jiggle module!
+* Note: You will also need to install [Numberful](https://github.com/KevinFerryJr/Numberful) & [SpringBox](https://github.com/KevinFerryJr/SpringBox) modules!
 
 ## Authors
 Kevin Ferry Jr.  
